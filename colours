@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Colour codes:
+RED="31m"
+DEFAULT="\033[00m"
+
+OPTIONS=$'\E['${RED}
+echo -e $OPTIONS this text is f***ing RED!!!
+
+OPTIONS=$'\E['${DEFAULT}
+echo -e $OPTIONS this text is f***ing DEFAULT!!!
