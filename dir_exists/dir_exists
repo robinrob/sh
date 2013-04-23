@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -n "`ls dir`" ]
+  then
+  echo "dir exists!"
+else
+  echo "dir does not exist."
+fi

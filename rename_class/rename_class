@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ARG_MSG="Invalid input.\nUsage: "$0" <old class name> <new class name>"
+[[ $1 && $2 ]] || { echo -e $ARG_MSG >&2; exit 1; }
+
+OLD_CLASS_NAME=$1
+NEW_CLASS_NAME=$2
+
+CLASS_SUFFIX='.cls'
+META_SUFFIX='.cls-meta.xml'
+TMP_SUFFIX='.tmp'
+
+for i in `ls src/classes/*${CLASS_SUFFIX}`; do
+	mv $i ${i}${TMP_SUFFIX}
+	cat ${i}${TMP_SUFFIX} | sed 's/'${OLD_CLASS_NAME}'/'${NEW_CLASS_NAME}'/g' > ${i}
+	rm -f ${i}${TMP_SUFFIX}
+done
+rm -f src/classes/*${TMP_SUFFIX}
+
+mv 	'src/classes/'${OLD_CLASS_NAME}${CLASS_SUFFIX} 'src/classes/'${NEW_CLASS_NAME}${CLASS_SUFFIX}
+mv  'src/classes/'${OLD_CLASS_NAME}${META_SUFFIX} 'src/classes/'${NEW_CLASS_NAME}${META_SUFFIX}
