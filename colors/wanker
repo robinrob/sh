@@ -1,0 +1,3 @@
+#!/bin/bash -eu
+
+printf '%7s\n' hello" "printf '%7s\' hello

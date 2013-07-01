@@ -1,0 +1,7 @@
+#!/bin/bash
+
+WORD1="word1"
+WORD2="word2"
+CONCATENATION=$WORD1' '$WORD2
+
+echo $CONCATENATION
