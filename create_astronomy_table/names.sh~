@@ -1,0 +1,16 @@
+#!/bin/bash
+
+data="photo_data"
+delimiter=":"
+type=$1
+echo "type: "$type
+
+#Extract the dates:
+awk '/<a href="astronomy\/camera\//' astronomy.html \
+| \
+awk '/'$type'/ \
+{ \
+    sub(/<a href="astronomy\/camera\//, ""); \
+    sub(/">/, ""); \
+    print $0; \
+}'

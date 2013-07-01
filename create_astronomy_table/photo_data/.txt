@@ -1,0 +1,11 @@
+saturncropped.jpg:<img id="photo" src="astronomy/camera/saturncropped_small.jpg:Saturn:00/00:
+venuszoom1.jpg:<img id="photo" src="astronomy/camera/venuszoom1_small.jpg:Venus in the evening:00/00:
+Moonveryclose.jpg:<img id="photo" src="astronomy/camera/Moonveryclose_small.jpg:Close-up of the Moon:00/00:
+moon2_cropped.jpg:<img id="photo" src="astronomy/camera/moon2_cropped_small.jpg:Portrait of the Moon:00/00:
+bigSunSpot.jpg:<img id="photo" src="astronomy/phone/bigSunSpot_small.jpg:Sun spot:00/00:
+saturnGood.jpg:<img id="photo" src="astronomy/phone/saturnGood_small.jpg:Saturn:00/00:
+saturnNeg.jpg:<img id="photo" src="astronomy/phone/saturnNeg_small.jpg:Negative Saturn:00/00:
+Jupitercompilation.jpg:<img id="photo" src="astronomy/phone/Jupiter&moons_small.jpg:Jupiter & Moons:00/00:
+Jupiter&moons.jpg:<img id="photo" src="astronomy/phone/theMoon_small.jpg:Jupiter Moons Sketch:00/00:
+theMoon.jpg:<img id="photo" src="astronomy/phone/Mooncompilation2_small.jpg:The Moon:00/00:
+Mooncompilation2.jpg::Moon compilation:00/00:

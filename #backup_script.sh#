@@ -1,0 +1,47 @@
+#!/bin/bash
+
+work_path="/home/robin/work"
+bookmarks_path="/home/robin/.mozilla/firefox/sx9otvkk.default/bookmarkbackups"
+backup_path="/home/robin/work_backup.tar.gz"
+french_path="/home/robin/robin/french/vocabulary"
+destination_path="/home/robin/backup_drive/work_backup.tar.gz"
+#mysql_path="/opt/lampp/lampp"
+
+mkdir /home/robin/backup_drive
+sudo mount /dev/disk/by-label/SD_4G /home/robin/backup_drive
+sudo mount /dev/disk/by-label/SD_4G_1 /home/robin/backup_drive
+sudo mount /dev/disk/by-label/BLACK_HOLE /home/robin/backup_drive
+sudo mount /dev/disk/by-label/MICRO_SD_4G /home/robin/backup_drive
+sudo mount /dev/disk/by-label/3B7F-7F32 /home/robin/backup_drive
+sudo mount /dev/disk/by-label/3B7F-7F32 /home/robin/backup_drive
+
+echo -e "Back up work from $work_path? [Y]: "
+read word
+
+if [ "$word" == "Y" ]
+    then
+    echo "Backing up:"
+    
+    echo -e "Copying firefox bookmarks from $bookmarks_path to $work_path"
+    cp -r $bookmarks_path/ $work_path/
+    echo "Done"
+        echo -e "Copying French vocabulary from $french_path to $work_path"
+    cp -r $french_path/ $work_path/
+    echo "Done"
+    
+    echo "Dumping MySQL tables to $work_path/programming/mysql/all_databases.sql"
+    sudo $mysql_path start
+    mysqldumpx -u root --all-databases > $work_path/programming/mysql/all_databases.sql
+    
+    echo "Backing up and compressing $work_path"
+    sudo tar -zcf $destination_path $work_path
+    
+    echo "Backed up $work_path to $destination_path"
+else 
+    echo "Aborted."
+fi
+	
+sudo umount /home/robin/backup_drive
+sudo rm -r /home/robin/backup_drive
+	
+exit 0

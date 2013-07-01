@@ -1,0 +1,11 @@
+#/bin/bash
+
+./extract_info.sh animals
+./extract_info.sh beaches_oceans
+./extract_info.sh cities
+./extract_info.sh mountains_valleys
+./extract_info.sh sunrises
+./extract_info.sh sunsets
+./extract_info.sh trees_plants
+
+exit 0
