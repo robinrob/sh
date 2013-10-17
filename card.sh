@@ -1,1 +1,1 @@
-cat ~/Documents/IMPORTANT/records/card.txt
+cat ~/Documents/IMPORTANT/records/card.txt | pbcopy

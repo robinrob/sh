@@ -1,5 +1,0 @@
-#!/bin/bash
-
-grep -o -h [0-9]* numbers.txt numbers2.txt > out.txt
-
-exit 0
