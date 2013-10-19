@@ -13,7 +13,7 @@ SRC_DIR = './'
 PYTHON3 = '3.2'
 
 # Do not change this - used in initial installation
-PYAPP_NAME = "sh"
+PYAPP_NAME = "pyapp"
 PYAPP = PYAPP_NAME + ".py"
 
 
