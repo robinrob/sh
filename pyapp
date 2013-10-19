@@ -1,0 +1,5 @@
+DESTINATION=$1
+
+git clone -b master git@bitbucket.org:robinrob/pyapp.git $1
+cd $1
+fab install

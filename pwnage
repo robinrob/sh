@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cd $PYTHON_HOME/books/data_structures_and_algorithms_using_python/
