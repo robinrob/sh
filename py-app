@@ -1,3 +1,5 @@
-#!/bin/sh
+DESTINATION=$1
 
-cd $PYAPP_HOME
+git clone -b master git@bitbucket.org:robinrob/py-app.git $DESTINATION
+cd $DESTINATION
+fab install -f $NEWPYAPP_HOME/fabfile.py
