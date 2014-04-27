@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ~/.zshrc
 source colors
 
 blue "REPOS: $REPOS
