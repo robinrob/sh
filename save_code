@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
-for repo in repos;
+source colors
+
+blue "REPOS: $REPOS
+"
+
+for repo in $REPOS
 do
-	echo "saving repo: $repo"
+	green "Saving repo: $repo"
 	cd $repo
 	rake save
 done
