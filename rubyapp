@@ -3,3 +3,10 @@
 DESTINATION=$1
 
 git clone -b master git@bitbucket.org:robinrob/ruby-app.git $DESTINATION
+
+cd $DESTINATION
+git submodule update
+git submodule init
+
+rm Rakefile
+ln robins-rakefile/Rakefile ./
