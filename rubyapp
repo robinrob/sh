@@ -1,0 +1,5 @@
+#!/bin/sh
+
+DESTINATION=$1
+
+git clone -b master git@bitbucket.org:robinrob/ruby-app.git $DESTINATION
