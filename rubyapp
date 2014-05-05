@@ -16,3 +16,4 @@ ln -s robins-rakefile/Rakefile ./
 
 echo "Removing .git folder"
 rm -rf .git
+git remote rm origin
