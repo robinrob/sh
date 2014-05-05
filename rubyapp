@@ -13,3 +13,6 @@ git submodule update
 echo "Sym-linking Rakefile"
 rm Rakefile
 ln -s robins-rakefile/Rakefile ./
+
+echo "Removing .git folder"
+rm -rf .git
