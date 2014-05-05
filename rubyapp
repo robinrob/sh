@@ -2,11 +2,14 @@
 
 DESTINATION=$1
 
+echo "Cloning ruby-app repo"
 git clone -b master git@bitbucket.org:robinrob/ruby-app.git $DESTINATION
 
 cd $DESTINATION
+echo "Initialising submodules"
 git submodule init
 git submodule update
 
+echo "Sym-linking Rakefile"
 rm Rakefile
 ln -s robins-rakefile/Rakefile ./
