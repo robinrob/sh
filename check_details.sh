@@ -25,10 +25,9 @@ format_line()
 {
 	IFS="
 	"
-	key=`echo "$1" | awk -F:: '{printf "%-30s", $1}'`
-	value=`echo "$1" | awk -F:: '{printf "%-30s", $2}'`
-	green $key && default ": " && red $value"
-	"
+	key=`echo "$1" | awk -F::'{printf "%-30s", $1}'`
+	value=`echo "$1" | awk -F::'{printf "%-30s", $2}'`
+	green $key && default ": " && red $value"\n"
 }
 
 ###################################################

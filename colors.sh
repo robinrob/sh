@@ -19,30 +19,35 @@ ccend=$(echo -e "\033[0m")
 
 red()
 {
-	echo ${ccred}$1${ccend}
+	echo -ne ${ccred}$1${ccend}
 }
 
 blue()
 {
-	echo ${ccblue}$1${ccend}
+	echo -ne ${ccblue}$1${ccend}
 }
 
 green()
 {
-	echo ${ccgreen}$1${ccend}
+	echo -ne ${ccgreen}$1${ccend}
 }
 
 yellow()
 {
-	echo ${ccyellow}$1${ccend}
+	echo -ne ${ccyellow}$1${ccend}
 }
 
 pink()
 {
-	echo ${ccpink}$1${ccend}
+	echo -ne ${ccpink}$1${ccend}
 }
 
 black()
 {
-	echo ${ccblack}$1${ccend}
+	echo -ne ${ccblack}$1${ccend}
+}
+
+default()
+{
+	echo -ne ${ccend}$1${ccend}
 }
