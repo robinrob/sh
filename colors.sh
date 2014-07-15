@@ -9,45 +9,45 @@
 #Brown       0;33     Yellow        1;33
 #Light Gray  0;37     White         1;37
 
-ccred=$(echo -e "\033[0;31m")
-ccyellow=$(echo -e "\033[0;33m")
-ccblue=$(echo -e "\033[0;34m")
-ccgreen=$(echo -e "\033[0;32m")
-ccpink=$(echo -e "\033[0;35m")
-ccblack=$(echo -e "\033[0;30m")
-ccend=$(echo -e "\033[0m")
+ccred=$(echo "\033[0;31m")
+ccyellow=$(echo "\033[0;33m")
+ccblue=$(echo "\033[0;34m")
+ccgreen=$(echo "\033[0;32m")
+ccpink=$(echo "\033[0;35m")
+ccblack=$(echo "\033[0;30m")
+ccend=$(echo "\033[0m")
 
 red()
 {
-	echo -ne ${ccred}$1${ccend}
+	echo ${ccred}$1${ccend}
 }
 
 blue()
 {
-	echo -ne ${ccblue}$1${ccend}
+	echo ${ccblue}$1${ccend}
 }
 
 green()
 {
-	echo -ne ${ccgreen}$1${ccend}
+	echo ${ccgreen}$1${ccend}
 }
 
 yellow()
 {
-	echo -ne ${ccyellow}$1${ccend}
+	echo ${ccyellow}$1${ccend}
 }
 
 pink()
 {
-	echo -ne ${ccpink}$1${ccend}
+	echo ${ccpink}$1${ccend}
 }
 
 black()
 {
-	echo -ne ${ccblack}$1${ccend}
+	echo ${ccblack}$1${ccend}
 }
 
 default()
 {
-	echo -ne ${ccend}$1${ccend}
+	echo ${ccend}$1${ccend}
 }
