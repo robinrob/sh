@@ -1,3 +1,9 @@
-# Check there is one argument which corresponds to a numerical directory name
-# and that the directory is not empty!
-[[ -d $1 && $1 != *[^0-9]* ]] || { echo "Invalid input." >&2; exit 1; }
+#!/bin/bash -eux
+
+# Check that argument 1 is not null without causing an error
+if [[ -n "$1" ]]
+then
+	echo "Yeah mate"
+else
+	echo "No mate"
+fi
