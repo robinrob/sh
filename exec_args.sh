@@ -2,4 +2,9 @@
 
 # Example: ./exec_args.sh "git status"
 
-$1
+function doit {
+	cmd=$@
+	$cmd
+}
+
+doit $@
