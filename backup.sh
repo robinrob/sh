@@ -13,22 +13,18 @@ function backup_db {
 	
 	curl -X PUT "${url}/${BACKUP_DB_NAME}"
 	
-	curl -X PUT "${url}/_replicator/$BACKUP_DB_NAME" -H "$ct" -d '@-' <<END
+	curl -X PUT "${url}/_replicator/$BACKUP_DB_NAME" -H "$ct" -d '@-' "
 	{
 	  "_id": "${BACKUP_DB_NAME}",
-	  "source": "${url}/postcodes",
-	  "target": "${url}/postcodes-backup-monday"
-	}
-
-	END
+	  "source": "${url}/$DB_NAME",
+	  "target": "${url}/$BACKUP_DB_NAME"
+	}"
 }
 
-create_backups_db "postcodes-backup-monday"
-create_backups_db "vacancies-backup-monday"
-create_backups_db "vacancies-backup-backup-monday"
-create_backups_db "vacancies-dev-backup-monday"
-
-
+backup_db postcodes monday
+# backup_db vacancies monday
+# backup_db vacancies-backup monday
+# backup_db vacancies-dev monday
 
 
 
