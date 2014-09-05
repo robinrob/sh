@@ -24,3 +24,10 @@ echo "LOG: $LOG"
 echo "PROC: $PROC"
 
 echo "ONE_UP: $ONE_UP"
+
+if [ -z "$LOG" ]
+then
+    echo "LOG is null mate!"
+else [ -n "$1" ]
+    echo "LOG not null mate!"
+fi
