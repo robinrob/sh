@@ -12,13 +12,14 @@ function backup_db {
 	BACKUP_DB_NAME="${DB_NAME}-backup-${DAY}"
 	
 	curl -X PUT "${url}/${BACKUP_DB_NAME}"
+
+	# JSON="{ \"_id\": \"${BACKUP_DB_NAME}\", \"source\": \"${url}/${DB_NAME}\", \"target\": \"${url}/${BACKUP_DB_NAME}\" }"
+	# echo
+	# echo "JSON:"
+	# echo $JSON
+	# echo
 	
-	curl -X PUT "${url}/_replicator/$BACKUP_DB_NAME" -H "$ct" -d '@-' "
-	{
-	  "_id": "${BACKUP_DB_NAME}",
-	  "source": "${url}/$DB_NAME",
-	  "target": "${url}/$BACKUP_DB_NAME"
-	}"
+	curl -X PUT ${url}/_replicator/${BACKUP_DB_NAME} -H $ct -d target=${url}/${BACKUP_DB_NAME}
 }
 
 backup_db postcodes monday
