@@ -1,11 +1,12 @@
 #!/bin/bash
 
-if [ -z "$1" ]
+ARG=$1
+if [ -z "$ARG" ]
 then
     echo "null mate!"
 fi
 
-if [ -n "$1" ]
+if [ -n "$ARG" ]
 then
     echo "not null mate!"
 fi
