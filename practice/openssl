@@ -1,0 +1,1 @@
+wanker rsautl -encrpyt -pubin -inkey /Users/robinsmith/.ssh/id_rsa.pub.pem
