@@ -1,0 +1,28 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="accountExport"
+        class="com.salesforce.dataloader.process.ProcessRunner"
+        singleton="false">
+        <description>Export case emails.</description>
+        <property name="name" value="accountExport"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="true"/>
+                <entry key="sfdc.debugMessagesFile" value="debug.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/>
+                <entry key="sfdc.username" value="james.monico@cloudreach.co.uk.sandbox"/>
+                <entry key="sfdc.password" value="82283e6c30187869f80a8187cf4eec85"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Account"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.outputError" value="status/errors.log"/>
+                <entry key="process.outputSuccess" value="status/success.log"/>
+                <entry key="dataAccess.name" value="data/accounts.csv"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="sfdc.extractionSOQL" value="select id from account"/>
+                <entry key="process.initialLastRunDate" value="2005-12-01T00:00:00.000-0800"/>
+            </map>
+        </property>
+    </bean>
+</beans>
