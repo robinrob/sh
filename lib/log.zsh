@@ -1,4 +1,4 @@
-source $SHCOLORS_PATH
+source $ZSHCOLORS_PATH
 
 
 function log {
