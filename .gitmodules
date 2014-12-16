@@ -1,6 +1,3 @@
-[submodule "rake"]
-	path = rake
-	url = git@github.com:robinrob/rakefile.git
 [submodule "rakelib"]
-	path = rakelib
-	url = git@github.com:robinrob/rakelib.git
+  path = rakelib
+  url = git@github.com:robinrob/rakelib.git
