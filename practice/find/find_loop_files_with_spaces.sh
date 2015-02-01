@@ -6,4 +6,4 @@ source $ZSHCOLORS_PATH
 
 IFS="
 "
-for file in $(gfind files_with_spaces -name 'test*' -type f | gxargs -0); do; print -r $file; done
+for file in $(gfind files_with_spaces -name 'test*' -type f); do; print -r $file; done
