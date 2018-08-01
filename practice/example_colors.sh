@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source colors
+source colors.sh
 
 red robin | awk '{ printf "%-40s", $1}'
 green sean | awk '{ printf "%-40s", $1}'
